@@ -18,3 +18,4 @@ Thus in repo we have included, the
 Also we've hosted the website using a tunneling technique, basically exposing our local host 5000 to public using ngork.
 
 If you want to see the training process, I'll share the colab link below:
+https://colab.research.google.com/drive/1lfri2GkGeHWAZEpjDNuHeiPFyPwHiaT8?usp=sharing
