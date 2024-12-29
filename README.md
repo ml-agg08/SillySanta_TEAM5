@@ -4,8 +4,19 @@ Santa has to give gifts to kids all over the globe. There are alot of kids lovin
 
 We made use of a pre-trained language model, BERT for this project. It's already trained on a very large wikipedia texts, making it able to capture the contextual, syntatcical and grammatical meanings of each tokens. 
 Initial hours went in learning the architecture of the model. We decided to use fine tuning over transfer learning. Hence weights in most of the layers are chnaged a bit, but to preserve its previosuly mentioned abilities we kept the learning rate very low.
-Then added a layer at the end for classification, since the initial pretrained model has entities like person, organisation etc which are compeltely useless for our case. Unlike image segemntation, it is very difficult to annotate the custom dataset. We had to annotate each and every token manually, so we were forced to keep the custom data set for fine tuning very small. 
-But still it performs fairly well. 
+Then added a layer at the end for classification, since the initial pretrained model has entities like person, organisation etc which are compeltely useless for our case. Unlike image segemntation, it is very difficult to annotate the custom dataset. We had to annotate each and every token manually, so we were forced to keep the custom data set for fine tuning very small. Also the classes used for multiclassification are as follow:
+
+    "O",    
+    "B-HOBBY",   
+    "I-HOBBY",     
+    "B-TOY",       
+    "I-TOY",       
+    "B-SPORT",     
+    "I-SPORT",     
+    "B-SUBJECT",   
+    "I-SUBJECT" 
+
+It may give results like, TOY for sandwich, but it make sens when we consider everything as interests. But we acknowldege the fact that it needs more releavnt labels as well as a lot of annotated data. But still it performs fairly well. 
 
 PLEASE NOTE:
 
