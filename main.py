@@ -30,9 +30,7 @@ label2id = {label: i for i, label in enumerate(label_list)}
 id2label = {i: label for i, label in enumerate(label_list)}
 
 def create_sample_dataset():
-    """
-    Create a larger synthetic dataset with annotated children's interests.
-    """
+
     texts = [
         ["I", "love", "playing", "with", "lego", "blocks", "and", "reading", "science", "books"],
         ["My", "favorite", "sport", "is", "soccer", "and", "I", "enjoy", "painting", "pictures"],
@@ -73,9 +71,7 @@ def create_sample_dataset():
     })
 
 def tokenize_and_align_labels(examples, tokenizer, label_all_tokens=True):
-    """
-    Tokenize inputs and align labels with tokens, handling subwords.
-    """
+
     tokenized_inputs = tokenizer(
         examples["tokens"],
         truncation=True,
@@ -105,9 +101,7 @@ def tokenize_and_align_labels(examples, tokenizer, label_all_tokens=True):
 
 
 def predict_interests_for_text(text, model, tokenizer):
-    """
-    Predict interests in a given text using the trained model.
-    """
+
     words = word_tokenize(text.lower())
     
   
