@@ -21,3 +21,6 @@ Hosted link using ngork: https://44e2-116-68-105-85.ngrok-free.app/
 
 If you want to see the training process, I'll share the colab link below:
 https://colab.research.google.com/drive/1lfri2GkGeHWAZEpjDNuHeiPFyPwHiaT8?usp=sharing
+
+Video preview:
+https://drive.google.com/file/d/1IsPExmpirQ8tM2-0LtNupjk1Tdrj5BpW/view?usp=sharing
