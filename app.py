@@ -22,12 +22,11 @@ id2label = {
 app = Flask(__name__)
 
 def predict_interests(text):
-    # Tokenize the input text
+
     words = word_tokenize(text.lower())
     encoded = tokenizer(words, is_split_into_words=True, return_tensors="pt", truncation=True, padding=True)
     word_ids = encoded.word_ids(0)
 
-    # Perform prediction
     inputs = {k: v.to("cpu") for k, v in encoded.items()}
     with torch.no_grad():
         outputs = model(**inputs)
